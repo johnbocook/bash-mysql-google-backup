@@ -23,11 +23,11 @@ echo "Files found"
     	echo "$newname has been successfully moved..."
 	done
     
-    mail -s " Mautic Backup has ran. $filenum were moved." $notifyemail <<< "$filenum database files have been moved to google drive for archiving."
+    mail -s "Database backup $filenum has been moved." $notifyemail <<< "$filenum database files have been moved to google drive for archiving."
     echo "Notificaiton: Upload has completed, Status email has been sent"
 
 else
 	filenum=0
-	mail -s "Mautic backup has ran. $filenum were moved." $notifyemail <<< "$filenum database files have been moved to google drive for archiving."
+	mail -s "Database backup $filenum has been moved." $notifyemail <<< "$filenum database files have been moved to google drive for archiving."
     echo "Notificaiton: Nothing to upload, Status email has been sent"
 fi
